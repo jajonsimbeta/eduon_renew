@@ -42,7 +42,7 @@ textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color: transp
 .header_grid{width:1300px; margin:0 auto; box-sizing: border-box; align-items: center; position: relative; }
 
 .eduon_logo{position: absolute; left:0; top:20px}
-.eduon_logo > a{display: block; width:90px; height:28px;  overflow: hidden;  text-indent: -5000em; background: url('images/eduon_logo_b.png') no-repeat;}
+.eduon_logo > a{display: block; width:90px; height:28px;  overflow: hidden;  text-indent: -5000em; background: url('../images/eduon_logo_b.png') no-repeat;}
 
 .main_nav{display: flex;height:67px; transition: all 0.5s; overflow: hidden; justify-content: center; margin: 0 150px;}
 .main_nav:hover{height:396px;}
@@ -87,7 +87,7 @@ textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color: transp
 .arlim.on > a > .xi-bell{display: block;}
 .arlim.on > a > .xi-bell-o{display: none;}
 .fixed_top .eduon_logo > a,
-.header_over .eduon_logo > a{background: url('images/eduon_logo_w.png') no-repeat;}
+.header_over .eduon_logo > a{background: url('../images/eduon_logo_w.png') no-repeat;}
 .fixed_top .main_nav > li > a,
 .header_over .main_nav > li > a{color:#222}
 .fixed_top .main_nav > li > a:hover,
