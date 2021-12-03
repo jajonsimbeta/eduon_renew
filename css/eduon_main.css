@@ -75,4 +75,4 @@ a.link_brnad{display: block; width:209px; line-height: 60px; border:1px solid #9
 .main_media .dir_controll .dir_btn{ color:#fff; position: absolute;  font-size:24px; width:24px; bottom:-75px;line-height: 24px; z-index: 100 z-index: 50; }
 .main_media .dir_controll .dir_btn.prev{left:650px; }
 .main_media .dir_controll .dir_btn.next{left:670px; }
-.main_media .dir_controll .dir_btn > a{position: absolute; top:0; left:0; width:100%; height: 100%; text-indent: -5000em; overflow: hidden;}
+.main_media .dir_controll .dir_btn > a{position: absolute; top:0; left:0; width:100%; height: 100%; text-indent: -5000em; overflow: hidden;} 
