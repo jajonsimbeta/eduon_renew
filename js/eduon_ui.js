@@ -6,6 +6,7 @@ $(document).ready(function(){
     },function(){
         $('.eduon_header').removeClass('header_over');
     });
+    
     setGnb();
     $(window).scroll(function(){
         setGnb();
