@@ -115,7 +115,27 @@
             </div>
         </header>
         <!--// header-->
+        <script type="text/javascript">
+            (function() {
+                /*GNB 스크롤 따라 다니는 UI :: 메인만*/
+                var isTop;
+                setGnb();
+                $(window).scroll(function(){
+                    setGnb();
+                });
 
+
+                function setGnb(){
+                    var scrollTop = $(window).scrollTop();
+                    if(scrollTop > 0){
+                        $('.eduon_header').addClass('fixed_top');
+                    }else{
+                        $('.eduon_header').removeClass('fixed_top');
+                    }
+                }  
+                
+            }());
+        </script>
 
         <main class="content_wrap">
 
