@@ -11,6 +11,7 @@
 .cont_nav_depth > em{display: flex; justify-content: space-between; align-items: center; color:#959595; font-weight:700}
 .cont_nav_depth > ul{line-height:32px; display: none;padding-bottom: 15px; position: absolute; width:200px; left:-1px; top:70px; z-index: 10; box-sizing: border-box; padding:0 18px 15px; border:1px solid #E1E1E1; border-top:none ;background:#FFF; }
 .cont_nav_depth:hover > ul{ display:block}
+.cont_nav_depth:hover > em > i{transform: rotate(180deg);}
 .cont_nav_depth > ul > li > a{color:#909090}
 .cont_nav_depth > ul > li > a:hover,
 .cont_nav_depth > ul > li > a.on{color:#FF5050}
@@ -76,3 +77,41 @@
 .adress_list > li:first-child{border-bottom:  1px solid rgba(0, 0, 0, 0.2)}
 .adress_list > li > em{width:200px; text-align: center; font-weight: 700; margin-right: 20px;}
 .adress_list > li > span{margin-right: 20px;}
+
+/* 강사모집 안내*/
+.sub_visual.support{background-image: url('../images/vusual_support.jpg');}
+.support_process{padding: 120px 0; background: #F8F8F8; position: relative;}
+.support_process h3{margin-bottom: 50px;}
+.process_list{position: relative;z-index: 5;}
+.process_list > li{padding:20px 53px;background: #FFFFFF; box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.04); border-radius: 11px; display: flex; margin-bottom: 10px; font-size:18px; color:#000; line-height: 25px; }
+.process_list .header{position: relative; width:364px;  box-sizing: border-box; padding-left:138px ;}
+.process_list .header .icon{position: absolute; left:0; top:0; }
+.process_list .header .num{display: block; color:#FF5050; margin-bottom:10px; font-size:18px; font-weight: 700;margin-top:20px;}
+.process_list .header .tit{display: block; color:#000; font-size:24px; font-weight: 700;}
+.process_list > li > ul{padding:24px 0 24px  50px; border-left:1px solid #EEEEEE; min-height: 50px; display: flex; flex-flow:column; justify-content: center;}
+.process_list > li > ul > li::before{content:'\00B7'; margin-right: 5px; font-size:25px;}
+.support_process .bg_sup{position: absolute; top:79px; left:50%; width:759px; height:322px; background: url('../images/bg_sup.png') no-repeat; margin-left: -1280px;}
+.support_process .bg_sup2{transform: rotateY(3.142rad); top:894px;  margin-left: 430px; }
+
+.techer_list{display: flex; justify-content: space-between;}
+.support_techers{padding: 120px 0;}
+.support_techers h3{margin-bottom: 96px;}
+
+.support_summary.grid_fix{font-size:30px; text-align: center; font-weight: 700; line-height: 40px; color:#000; margin-top:132px;}
+.support_btn{margin-top: 43px;}
+.defalt_btn{display: inline-block; font-size: 20px; line-height: 56px; background: #000; padding:0 132px; color:#FFF; font-weight: 800; transition: all 0.5s;}
+.defalt_btn:hover{background: #FF5050;}
+
+
+/* 강의 개설 안내*/
+.sub_visual.lecture{background-image: url('../images/vusual_lecture.jpg');}
+.lecture_process{padding: 120px 0; background: #F8F8F8; position: relative; overflow: hidden; width:100%; height:870px}
+.lecture_process h3{margin-bottom: 50px;}
+.lecture_process .process_list .header .num{color:#319096}
+.lecture_process + .support_summary{padding-bottom: 120px;}
+
+.lecture_process .bg_sup{position: absolute; left:50%; background: rgba(0, 0, 0, 0.04); border-radius: 100%;}
+.lecture_process .bg_sup1{width:761px; height:761px; margin-left:-1400px; top:-310px}
+.lecture_process .bg_sup2{width:814px; height:814px;  margin-left:800px; top:107px}
+.lecture_process .bg_sup3{width:386px; height:386px;  margin-left:-900px; top:1026px}
+
