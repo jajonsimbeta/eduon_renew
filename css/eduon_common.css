@@ -21,7 +21,7 @@ table{width:100%;border-collapse:collapse; table-layout:fixed; word-wrap: break-
 caption { text-indent:-999999999px; width: 0;height: 0px; font-size:0; padding: 0;border: 0;}
 
 /***common***/
-body,html { font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-size: 16px; color: #222; margin: 0; padding: 0; line-height: 1; width: 100%; }
+body,html { font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; font-size: 16px; color: #222; margin: 0; padding: 0; line-height: 1; width: 100%; height:100%} 
 li,ul { padding: 0; margin: 0; list-style: none}
 table,tbody,td,tr { border-collapse: collapse; padding: 0; margin: 0}
 a,button,label { text-decoration: none; color:#000; cursor: pointer; background: none; border: 0}
@@ -36,6 +36,7 @@ textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color: transp
 
 /*layout*/
 .eduon_wrap{position: relative; width:100%; overflow: hidden;}
+.scroll_hidden{height:100%; overflow: hidden;}
 .eduon_wrap::before{content:''; position: absolute; width:100%; z-index: 99; background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%); left:0; height:169px;mix-blend-mode: multiply;}
 .eduon_header{text-align:center; background:rgba(255,255,255,0); position:absolute; width:100%; top:0; left:0; z-index: 1000; line-height: 1.5em; transition: all 0.5s; }
 .header_wrap:after{content:''; width:100%; height:1px; position: absolute; top:67px; left:00 ;background: rgba(255, 255, 255, 0.3); }
@@ -71,9 +72,8 @@ textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color: transp
 .state_login > ul > li:nth-child(2) > a{padding-left: 11px; }
 .state_login > ul > li:nth-child(2) > a::before{content:'';  width:1px; height:13px; background: #FFF; top:4px; left:0px; position: absolute;}
 
-.eduon_header.fixed_top,
-.eduon_header.header_over{background: #FFF; position: fixed;}
-.eduon_header.header_over{ border-bottom:solid 1px #EAEAEA}
+.eduon_header.fixed_top{position: fixed; border-bottom:solid 1px #EAEAEA;background: #FFF;}
+.eduon_header.header_over{ border-bottom:solid 1px #EAEAEA;background: #FFF;}
 .fixed_top .header_wrap:after,
 .header_over .header_wrap:after{content:''; width:100%; height:1px; position: absolute; top:67px; left:0 ;background: #EAEAEA; }
 
@@ -143,5 +143,7 @@ textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color: transp
 .footer_family > ul {position: absolute; bottom:32px; left:0; border:1px solid #959595; width:100%; padding: 18px; box-sizing: border-box; display: none;}
 .footer_family > ul > li > a{color:#FFF;  line-height: 2em;}
 .footer_family:hover > ul{display: block;}
+
+
 
 

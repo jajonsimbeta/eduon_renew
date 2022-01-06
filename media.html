@@ -115,9 +115,9 @@
         <main class="content_wrap">
 
             <div class="sub_wrap">
-                <div class="sub_visual brand">
-                    <h2 class="visual_title">브랜드 입점 안내</h2>
-                    <p class="visual_copy">파트너사의 성장을 위해 에듀온이 함께 합니다.</p>
+                <div class="sub_visual media">
+                    <h2 class="visual_title">미디어</h2>
+                    <p class="visual_copy">에듀온의 최신 소식들을 전달해드립니다.</p>
                 </div><!--서브 비쥬얼 영역-->
 
                 <div class="cont_nav_wrap">
@@ -148,12 +148,12 @@
                         </div>
 
                         <div class="cont_nav_depth">
-                            <em>브랜드 입점<i class="xi-caret-down"></i></em>
+                            <em>스튜디오 소개<i class="xi-caret-down"></i></em>
                             <ul>
                                 <li><a href="#">강사모집 안내</a></li>
                                 <li><a href="#">강의개설 안내</a></li>
-                                <li><a href="#"  class="active">브랜드 입점</a></li>
-                                <li><a href="#">스튜디오 소개</a></li>
+                                <li><a href="#">브랜드 입점</a></li>
+                                <li><a href="#" class="active">스튜디오 소개</a></li>
                             </ul>
                         </div>
                     </div>
@@ -161,90 +161,155 @@
 
                 <div class="sub_content">
                     <!--서브 컨텐츠 시작-->
-                    <div class="brand_process" >
-                        <h3 class="sub_cont_tit">브랜드 입점 프로세스</h3>
-                        <div class="process grid_fix">
-                           <ul class="process_list">
-                                <li>
-                                    <div class="header">
-                                        <span class="icon"><img src="images/prc_icon3_1.png" alt=""></span>
-                                        <span class="num">STEP 01</span>
-                                        <em class="tit">브랜드 입점 신청서 <br>작성</em>
-                                    </div>
-                                    <ul>
-                                        <li>기존 제작된 강의를 보유하고 있는 개인, 단체, 학원, 회사 등 지원 가능</li>
-                                        <li>제작된 컨텐츠가 없어도 제작 기획서를 통해 브랜드 입점 신청 가능</li>
+                    <div class="sns_wrap grid_fix" >
+                        <h3 class="sub_cont_tit">에듀온 SNS</h3>
+                        <div class="sns_gallery">
+                            <ul>
+                                <li><a href="#"><img src="images/sns_thum1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum4.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum5.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum6.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum7.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum8.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum9.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum10.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum11.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/sns_thum12.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="more"><i class="xi-plus-min"><span class="hidden">미디어 더보기</span></i></a>
+                        <!--//스튜디어 사진 갤러리-->
+                        <div class="gallery_viewer" style="display: none;"> 
+                            
+                            
+                            <div class="dir_btn">
+                                <button type="button" class="prev"><i class="xi-angle-left-thin"></i></button>
+                                <button type="button" class="next"><i class="xi-angle-right-thin"></i></button>
+                            </div>
+
+                            <button type="button" class="close_gallery"><i class="xi-close-thin"></i></button>
+                        </div>
+                        <script>
+                            (function() {
+                                
+
+                                var curnum = 0;
+                                var totalNum = 0;
+                                
+                                
+                                $('.sns_gallery').find('> ul > li').each(function(index){
+                                    $(this).click(function(e){
+                                        e.preventDefault();
+                                        $('body').addClass('scroll_hidden'); // 스크롤 차단
+                                        $('.gallery_viewer').show();
+                                        $('.gallery_viewer > ul').remove();
+                                        var ga_el = $(this).parent('ul').clone();
+                                        $('.gallery_viewer').prepend(ga_el);
+                                        curnum = index;
+                                        $('.gallery_viewer > ul > li').eq(index).addClass('on');
+                                        totalNum = $('.gallery_viewer > ul > li').length;
+                                    });
+                                });
+                               
+                            
+                                function scrollMove(obj){
+                                    if(obj.hasClass('next')){
+                                        curnum = (curnum+1) % totalNum;
+                                    }else{
+                                        if(curnum > 0){
+                                            curnum--;
+                                        }else{
+                                            curnum = totalNum-1;
+                                        }
+                                    }
+                                  
+                                    $('.gallery_viewer > ul > li').removeClass('on').eq(curnum).addClass('on');
+                                }
+
+                                $('.gallery_viewer > .dir_btn > button').on('click',function(e){
+                                    scrollMove($(this));
+                                });
+
+                                $('.close_gallery').click(function(){
+                                    $('.gallery_viewer').hide();
+                                    $('body').removeClass('scroll_hidden');
+                                });
+                            }());
+
+                        </script>
+                    </div><!--에듀온 SNS-->
 
 
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div class="header">
-                                        <span class="icon"><img src="images/prc_icon3_2.png" alt=""></span>
-                                        <span class="num">STEP 02</span>
-                                        <em class="tit">담당자 검토 및 상담</em>
-                                    </div>
-                                    <ul>
-                                        <li>입점 신청서 내용 및 강의 샘플 등을 검토하여 적합 여부 결정</li>
-                                        <li>담당자가 연락하여 자세한 절차 안내</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div class="header">
-                                        <span class="icon"><img src="images/prc_icon3_3.png" alt=""></span>
-                                        <span class="num">STEP 03</span>
-                                        <em class="tit">세부사항 미팅<br>
-                                            및 계약</em>
-                                    </div>
-                                    <ul>
-                                        <li>브랜드 홈페이지의 디자인 방향, 인터페이스 구성과 서비스 종류, 계약 세부사항 등을 논의</li>
-                                        <li>계약서 작성</li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <div class="header">
-                                        <span class="icon"><img src="images/prc_icon3_4.png" alt=""></span>
-                                        <span class="num">STEP 04</span>
-                                        <em class="tit">브랜드 홈페이지<br>
-                                            제작, 런칭</em>
-                                    </div>
-                                    <ul>
-                                        <li>제휴사와의 지속적인 의견 교환을 통한 브랜드 홈페이지 제작 진행</li>
-                                        <li>강의제작이 필요한 경우 홈페이지 제작과 동시 진행</li>
-                                        <li>오픈 이벤트와 함께 브랜드 런칭</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div class="header">
-                                        <span class="icon"><img src="images/prc_icon3_5.png" alt=""></span>
-                                        <span class="num">STEP 05</span>
-                                        <em class="tit">정산안내</em>
-                                    </div>
-                                    <ul>
-                                        <li>매달 매출액을 집계하여 정산 진행</li>
-                                        <li>정산금액 = (브랜드 강좌의 총 매출액-결제 수수료)x50%</li>
-                                    </ul>
-                                </li>
-                           </ul>
+                    <div class="news_wrap grid_fix">
+                        <h3 class="sub_cont_tit">보도자료</h3>
+                        <div class="bss_news">
+                            <table class="media_tbl">
+                                <colgroup>
+                                    <col>
+                                    <col width="70%">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>제목</th>
+                                        <th>날짜</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1011</td>
+                                        <td><a href="#">에듀온, “군무원 차량직 낮은 점수로 합격이 가능해” 에듀온, “군무원 차량직 낮은 점수로 합격이 가능해”</a></td>
+                                        <td>2021.10.10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1011</td>
+                                        <td><a href="#">교육기업 에듀온, 공무원(계리직), 전산직 인강 할인 진행</a></td>
+                                        <td>2021.10.10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1011</td>
+                                        <td><a href="#">유상통, 계리직 공무원 기초 강의와 교재 무료로 제공</a></td>
+                                        <td>2021.10.10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1011</td>
+                                        <td><a href="#">에듀온, 공무원 계리직 4회 연속 합격자수 1위 달성기념 ...</a></td>
+                                        <td>2021.10.10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1011</td>
+                                        <td><a href="#">에듀온, “군무원 차량직 낮은 점수로 합격이 가능해”</a></td>
+                                        <td>2021.10.10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1011</td>
+                                        <td><a href="#">에듀온, “군무원 차량직 낮은 점수로 합격이 가능해”</a></td>
+                                        <td>2021.10.10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
 
-                        <sapn class="bg_sup bg_sup1">EDUON</sapn>
-                        <sapn class="bg_sup bg_sup2">BRAND</sapn>
-                    </div><!--강사지원 프로세스-->
-
-
-                    
-                    <div class="support_summary grid_fix">
-                        <p>교육컨텐츠를 서비스 하고 싶으신가요?</p>
-                        <p>에듀온과 함께 하세요! 귀사의 컨텐츠에 에듀온이 날개를 달아 드리겠습니다!</p>
-                        <div class="support_btn">
-                            <a href="#" class="defalt_btn">브랜드 입점 신청</a>
-                        </div>
+                        <ul class="pagination">
+                            <li><a href="#" title="처음으로" class="first"><i class="xi-angle-left-min"></i><i class="xi-angle-left-min"></i></a></li>
+                            <li><a href="#" title="이전으로" class="prev"><i class="xi-angle-left-min"></i></a></li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#" title="다음으로" class="next"><i class="xi-angle-right-min"></i></a></li>
+                            <li><a href="#" title="마지막으로" class="last"><i class="xi-angle-right-min"></i><i class="xi-angle-right-min"></i></a></li>
+                        </ul>
                     </div>
-
-
-            
                     <!--//서브 컨텐츠 끝-->
                 </div>
 

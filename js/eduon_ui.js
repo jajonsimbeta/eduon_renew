@@ -8,8 +8,6 @@ $(document).ready(function(){
     });
    
 
-
-
     $('.myname').click(function(){
         $(this).toggleClass('on');
     });
