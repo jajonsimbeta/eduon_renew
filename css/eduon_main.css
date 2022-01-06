@@ -1,3 +1,5 @@
+.eduon_wrap::before{content:''; position: absolute; width:100%; z-index: 99; background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%); left:0; height:169px; mix-blend-mode: multiply;} /*메인 비쥬얼 그라이언트 처리*/
+
 .main_content{padding-bottom:150px ;}
 /*메인 비쥬얼*/
 .main_visual{position: relative;}

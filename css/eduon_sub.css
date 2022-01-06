@@ -1,8 +1,11 @@
+.eduon_wrap::before{content:''; position: absolute; width:100%; z-index: 10; background:rgba(0,0,0,0.3); left:0; height:404px; mix-blend-mode: multiply;} /*서브 마스크 처리*/
+
+
 /*sub_layout*/
 .sub_visual {height:404px;  background-position: center 0; background-repeat: no-repeat; display: flex; flex-direction: column; align-items: center; justify-content: center;}
 .sub_visual.company{background-image: url('../images/visual_company.jpg');}
-.sub_visual .visual_title{font-size:48px; color:#FFF }
-.sub_visual .visual_copy{font-size:22px; margin-top:20px ; font-weight: 700; color:#FFF}
+.sub_visual .visual_title{font-size:48px; color:#FFF; position: relative; z-index: 20; }
+.sub_visual .visual_copy{font-size:22px; margin-top:20px ; font-weight: 700; color:#FFF;position: relative; z-index: 20;}
 .cont_nav_wrap{border-top: 1px solid #E1E1E1;border-bottom: 1px solid #E1E1E1; background: #FFF;}
 .cont_nav{width:1200px; margin:0 auto; line-height:70px;  height: 70px;}
 .cont_nav:after{content:''; display: block; clear:both}
@@ -253,4 +256,9 @@
 .lecturebox .infobox .bottom .star-rate{vertical-align:middle;}
 .lecturebox .infobox .bottom .people{display:inline-block; vertical-align:middle;}
 .lecturebox .zzim:hover + .lecture{border-color:#747474; box-shadow: 5px 5px 5px rgba(000,000,000,0.1)}
+
+/*학습지원*/
+.sub_visual.customer{background-image: url('../images/visual_customer.jpg');}
+.customer_wrap {padding: 100px 0 200px; position: relative;}
+.customer_wrap .title_search{margin-bottom: 40px;}
 
