@@ -269,7 +269,7 @@
                                 <em class="tit">에듀온 전산직</em>
                                 <div class="hash_tag">
                                     <span># 전산직 전문 강의&교재</span>
-                                    <span># 발빠른 수험정보</span>
+                                    <span class="mr"># 발빠른 수험정보</span>
                                     <span># 면접 완벽 대비</span>
                                 </div>
                                 <a href="#" class="link_brnad">브랜드 바로가기</a>
@@ -278,7 +278,7 @@
                             <div class="brand_item">
                                 <em class="tit">에듀온 정보처리</em>
                                 <div class="hash_tag">
-                                    <span>#쉽고 자세한 해설</span>
+                                    <span class="mr">#쉽고 자세한 해설</span>
                                     <span>#철저한 기출분석</span>
                                     <span>#최신개정 전면 반영</span>
                                 </div>
@@ -424,7 +424,7 @@
                                             jQuery('.media_item', this).not('.bx-clone')
                                                 .eq(idx).addClass('on');
                                         },
-                                        onSlideBefore: function(el, oidx, nidx) {
+                                        onSlideNext: function(el, oidx, nidx) {
                                             var _el = jQuery(el);
 
                                             if ((oidx+1)%_visualSlider.getSlideCount() == nidx) { // next
@@ -432,10 +432,20 @@
                                             } else { // prev
                                                 _el.addClass('on');
                                             }
+                                            var _elon = jQuery(el).addClass('on');
+                                            _elon.siblings('.on').removeClass('on');
                                         },
-                                        onSlideAfter:  function(el, oidx, nidx) {
-                                            var _el = jQuery(el).addClass('on');
-                                            _el.siblings('.on').removeClass('on');
+                                        onSlidePrev:  function(el, oidx, nidx) {
+                                            var _el = jQuery(el);
+
+                                            if ((oidx+1)%_visualSlider.getSlideCount() == nidx) { // next
+                                                _el.next().addClass('on');
+                                            } else { // prev
+                                                _el.addClass('on');
+                                            }
+                                            var _elon = jQuery(el).addClass('on');
+                                            _elon.siblings('.on').removeClass('on');
+                                            
                                         }
                                     });
                                 
