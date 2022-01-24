@@ -218,8 +218,127 @@
                         
 
                     </div><!--교재몰-->
+                    
+                    <!-- 장바구니 -->
+                    <div class="cart_box_wrap">
+                        <div class="cart_box_grid">
+                            <ul class="cart_list">
+                                <li>
+                                    <input type="checkbox" id="basket_comm_check_59">
+                                    <label for="basket_comm_check_59">
+                                        <span class="book_img">
+                                            <img src="https://eduon.com/images/Book/BookImg/B59S.jpg?1632468005" alt="교재">
+                                        </span>
+                                        <span class="summary">
+                                            <span class="book_nm">유상통 컴퓨터일반 기본서 유상통 컴퓨터일반 기본서</span>
+                                            <span class="author">유수</span>
+                                            <a href="#" class="quick_buy">바로구매</a>
+                                        </span>
+                                    </label>
+                                    <button class="deleate_list" type="button" title="삭제"><i class="xi-close-thin"></i></button>
+                                </li>
 
+                                <li>
+                                    <input type="checkbox" id="basket_comm_check_60">
+                                    <label for="basket_comm_check_60">
+                                        <span class="book_img">
+                                            <img src="https://eduon.com/images/Book/BookImg/B59S.jpg?1632468005" alt="교재">
+                                        </span>
+                                        <span class="summary">
+                                            <span class="book_nm">유상통 컴퓨터일반 기본서</span>
+                                            <span class="author">유수</span>
+                                            <a href="#" class="quick_buy">바로구매</a>
+                                        </span>
+                                    </label>
+                                    <button class="deleate_list" type="button" title="삭제"><i class="xi-close-thin"></i></button>
+                                </li>
 
+                                <li>
+                                    <input type="checkbox" id="basket_comm_check_61">
+                                    <label for="basket_comm_check_61">
+                                        <span class="book_img">
+                                            <img src="https://eduon.com/images/Book/BookImg/B59S.jpg?1632468005" alt="교재">
+                                        </span>
+                                        <span class="summary">
+                                            <span class="book_nm">유상통 컴퓨터일반 기본서</span>
+                                            <span class="author">유수</span>
+                                            <a href="#" class="quick_buy">바로구매</a>
+                                        </span>
+                                    </label>
+                                    <button class="deleate_list" type="button" title="삭제"><i class="xi-close-thin"></i></button>
+                                </li>
+
+                                <li>
+                                    <input type="checkbox" id="basket_comm_check_62">
+                                    <label for="basket_comm_check_62">
+                                        <span class="book_img">
+                                            <img src="https://eduon.com/images/Book/BookImg/B59S.jpg?1632468005" alt="교재">
+                                        </span>
+                                        <span class="summary">
+                                            <span class="book_nm">유상통 컴퓨터일반 기본서</span>
+                                            <span class="author">유수</span>
+                                            <a href="#" class="quick_buy">바로구매</a>
+                                        </span>
+                                    </label>
+                                    <button class="deleate_list" type="button" title="삭제"><i class="xi-close-thin"></i></button>
+                                </li>
+
+                                <li>
+                                    <input type="checkbox" id="basket_comm_check_63">
+                                    <label for="basket_comm_check_63">
+                                        <span class="book_img">
+                                            <img src="https://eduon.com/images/Book/BookImg/B59S.jpg?1632468005" alt="교재">
+                                        </span>
+                                        <span class="summary">
+                                            <span class="book_nm">유상통 컴퓨터일반 기본서</span>
+                                            <span class="author">유수</span>
+                                            <a href="#" class="quick_buy">바로구매</a>
+                                        </span>
+                                    </label>
+                                    <button class="deleate_list" type="button" title="삭제"><i class="xi-close-thin"></i></button>
+                                </li>
+
+                                <li>
+                                    <input type="checkbox" id="basket_comm_check_64">
+                                    <label for="basket_comm_check_64">
+                                        <span class="book_img">
+                                            <img src="https://eduon.com/images/Book/BookImg/B59S.jpg?1632468005" alt="교재">
+                                        </span>
+                                        <span class="summary">
+                                            <span class="book_nm">유상통 컴퓨터일반 기본서</span>
+                                            <span class="author">유수</span>
+                                            <a href="#" class="quick_buy">바로구매</a>
+                                        </span>
+                                    </label>
+                                    <button class="deleate_list" type="button" title="삭제"><i class="xi-close-thin"></i></button>
+                                </li>
+                            </ul>
+                            <div class="cart_btn">
+                                <button class="delate" type="button">선택 삭제</button>
+                                <button class="s_order" type="button">선택 주문</button>
+                                <button class="a_order" type="button">전체 주문</button>
+                            </div>
+
+                            <div class="cart_toggle">
+                                <button type="button" class="bt_cart_toggle">
+                                    <span class="bt_open">장바구니 열기 <i class="xi-angle-up-thin"></i></span>
+                                    <span class="bt_close">장바구니 닫기 <i class="xi-angle-down-thin"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <script>
+                        (function() {
+                            $('.bt_cart_toggle').on('click',function(e){
+                                e.preventDefault();
+                                $('.cart_box_wrap').toggleClass('open');
+                            });
+
+                        }());
+
+                    </script>
 
                     <!--//서브 컨텐츠 끝-->
                 </div>
@@ -308,7 +427,7 @@
                     <em>대표 전화</em>
                     <div class="phone_number">
                         <tel href="1599-9470">1599-9470</tel>
-                        <span>평일 9:30 - 17:30 (토,일, 공휴일 휴무)</span>
+                        <span>평일 9:30 - 17:30 (토, 일, 공휴일 휴무)</span>
                     </div>
                     <div class="contact_link">
                         <a href="#">강의제작지원센터</a>

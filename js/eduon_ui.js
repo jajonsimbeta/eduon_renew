@@ -14,4 +14,9 @@ $(document).ready(function(){
         $(this).toggleClass('on');
     });
 
+
+    $('.cont_nav_depth').click(function(){
+        $(this).toggleClass('on');
+    });
+
 });

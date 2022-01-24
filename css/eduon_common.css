@@ -4,7 +4,7 @@ fieldset,img {border:0 none}
 dl,ul,ol,menu,li {list-style:none}
 blockquote, q {quotes: none}
 blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
-input,textarea,button{border:0 none;background-color:transparent; vertical-align:middle}
+input,textarea,button{border:0 none;background-color:transparent; vertical-align:middle; outline: none;}
 select,button{cursor:pointer}
 select{border:0 none;vertical-align:middle}
 textarea{border:1px solid #e0e0e0; font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
@@ -131,14 +131,14 @@ textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color: transp
 
 .policy_link{display: flex; }
 .policy_link > li > a{color:#D3D3D3; padding:0 8px; display: block; line-height: 1;}
-.policy_link > li{border-right:1px solid #D3D3D3; height:16px}
+.policy_link > li{border-right:1px solid rgba(211, 211, 211, 0.5); height:16px}
 .policy_link > li:last-child{border-right:none}
 .policy_link > li:first-child > a{padding-left: 0;}
 
 .social_link{display:flex; justify-content: flex-end;}
 .sns_link{display: flex; font-size:20px; margin-right: 80px;}
 .sns_link > li{margin-left: 20px; }
-.sns_link > li > a{color:#FFF; display: block; padding: 5px 0px 0px 0px; border-bottom:1px solid #FFF; text-align: center;}
+.sns_link > li > a{color:#FFF; display: block; padding: 10px 0px 0px 0px;text-align: center;}
 .sns_link > li > a.blog{line-height: 1; font-weight: 900; font-size:22px}
 
 .footer_family{position: relative; }
@@ -146,7 +146,7 @@ textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color: transp
 .footer_family > ul {position: absolute; bottom:32px; left:0; border:1px solid #959595; width:100%; padding: 18px; box-sizing: border-box; display: none;}
 .footer_family > ul > li > a{color:#FFF;  line-height: 2em;}
 .footer_family:hover > ul{display: block;}
-
+.footer_family:hover > a > i{transform: rotate(180deg);} 
 
 
 
